@@ -1,12 +1,11 @@
 package com.pluralsight;
-import java.io.BufferedReader;
-import java.util.Scanner;
 
 public class Employee {
     private String name;
-    private int employeeId, hoursWorked, payRate;
+    private int employeeId;
+    private double hoursWorked, payRate;
 
-    public Employee(String name, int employeeId, int hoursWorked, int payRate) {
+    public Employee(int employeeId, String name, double hoursWorked, double payRate) {
         this.name = name;
         this.employeeId = employeeId;
         this.hoursWorked = hoursWorked;
@@ -14,19 +13,19 @@ public class Employee {
     }
 
     //getter
-    public String getName() {
+    public static String getName() {
         return this.name;
     }
 
-    public int getEmployeeId() {
+    public static int getEmployeeId() {
         return this.employeeId;
     }
 
-    public int getHoursWorked() {
+    public double getHoursWorked() {
         return this.hoursWorked;
     }
 
-    public int getPayRate() {
+    public double getPayRate() {
         return this.payRate;
     }
 
@@ -39,15 +38,15 @@ public class Employee {
         this.employeeId = employeeId;
     }
 
-    public void setHoursWorked(int hoursWorked) {
+    public void setHoursWorked(double hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
 
-    public void setPayRate(int payRate) {
+    public void setPayRate(double payRate) {
         this.payRate = payRate;
     }
 //method
-    public double getGrossPay() {
+    public static double getGrossPay() {
         return hoursWorked * payRate;
 
 
