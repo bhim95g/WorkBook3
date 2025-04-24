@@ -7,10 +7,13 @@ public class PayRollCalculator {
     public static void main(String[] args) {
 
         try {
-            FileReader fileReader = new FileReader("src/main/resources/employees.csv");
+            FileReader fileReader = new FileReader("src/main/resources/" + fileName);
+            FileWriter fileWriter = new FileWriter("src/main/resources/" + newFile);
 
+            Scanner scanner = new Scanner
             BufferedReader bufReader = new BufferedReader(fileReader);
             bufReader.readLine(); //skips first line
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             String input;
             //read until there is no more data
